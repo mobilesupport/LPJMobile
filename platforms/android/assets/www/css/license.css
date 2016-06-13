@@ -104,3 +104,9 @@ h1 {
     height: 3%;
 }
 
+.btnScan{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 10%;
+}

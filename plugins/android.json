@@ -16,9 +16,6 @@
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.phonegap.LPJ"
         },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.phonegap.LPJ"
-        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.phonegap.LPJ"
         },
@@ -74,5 +71,9 @@
             "PACKAGE_NAME": "com.phonegap.LPJ"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.phonegap.LPJ"
+        }
+    }
 }
