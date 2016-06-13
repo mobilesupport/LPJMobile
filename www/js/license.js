@@ -44,16 +44,17 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         alert("4");
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+        getvalue();
     }
 };
+
+ 
+    function getvalue(){
+        alert("getvalue");
+        var result=getUrlParameter("result");
+        alert(result);
+    
+    }
 
 
 
