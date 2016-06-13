@@ -7,13 +7,13 @@
         "files": {}
     },
     "installed_plugins": {
-        "phonegap-plugin-barcodescanner": {
-            "PACKAGE_NAME": "com.phonegap.LPJ"
-        },
         "cordova-plugin-battery-status": {
             "PACKAGE_NAME": "com.phonegap.LPJ"
         },
         "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.phonegap.LPJ"
+        },
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.phonegap.LPJ"
         },
         "cordova-plugin-console": {
@@ -69,11 +69,10 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.LPJ"
-        }
-    },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
+        },
+        "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.phonegap.LPJ"
         }
-    }
+    },
+    "dependent_plugins": {}
 }
