@@ -40,6 +40,11 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="barcodescanner.js"></script>
+     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/license.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
     <title>Login Page</title>
 </head>
 
@@ -48,11 +53,7 @@
         
         <button onclick="scan();">Scan me</button>
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
+   
 </body>
 
 </html>
