@@ -48,6 +48,26 @@ var app = {
     }
 };
 
-function license_onclick(){
-    window.location="license.html";
+function scan(){
+      cordova.plugins.barcodeScanner.scan(
+      function (result) {
+//          alert("We got a barcode\n" +
+//                "Result: " + result.text + "\n" +
+//                "Format: " + result.format + "\n" +
+//                "Cancelled: " + result.cancelled);
+          window.location="license.html?result="+result.text;
+          
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      },
+      {
+         
+          "showFlipCameraButton" : true, // iOS and Android 
+          "prompt" : "Place a barcode inside the scan area", // supported on Android only 
+          "formats" : "QR_CODE,", // default: all but PDF_417 and RSS_EXPANDED 
+         
+      }
+   );
+    
 }

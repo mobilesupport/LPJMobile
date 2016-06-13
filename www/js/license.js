@@ -34,7 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
+        getvalue();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -49,25 +49,10 @@ var app = {
     }
 };
 
-function scan(){
-        alert("hillohe");
-      cordova.plugins.barcodeScanner.scan(
-      function (result) {
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
-      }, 
-      function (error) {
-          alert("Scanning failed: " + error);
-      },
-      {
-         
-          "showFlipCameraButton" : true, // iOS and Android 
-          "prompt" : "Place a barcode inside the scan area", // supported on Android only 
-          "formats" : "QR_CODE,", // default: all but PDF_417 and RSS_EXPANDED 
-         
-      }
-   );
+function getvalue(){
+    alert("deviceready");
+    var result=getUrlParameter("result");
+    alert(result);
     
 }
+
