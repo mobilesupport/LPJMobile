@@ -28,7 +28,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
     
-         $(".ui-loader").hide();
         document.addEventListener('deviceready', this.onDeviceReady, false);
         
     },
