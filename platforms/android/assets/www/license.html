@@ -42,10 +42,9 @@
     <link rel="stylesheet" type="text/css" href="css/common.css" />
     <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
-    $(document).bind('pageinit',function(){
-        alert("fuck l");
-        $.mobile.loadingMessage = false;
-    })
+   $(document).ready( function() {
+    $(".ui-loader").hide();
+});
 </script> 
     <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
     <script type="text/javascript" src="barcodescanner.js"></script>
@@ -181,10 +180,10 @@
 </body>
         <script type="text/javascript">
        
-        $(document).ready(function(){        
-      
-            getvalue();
-        });
+//        $(document).ready(function(){        
+//      
+//            getvalue();
+//        });
    
     </script>
 
