@@ -49,10 +49,5 @@ var app = {
     }
 };
 
-function getvalue(){
-    alert("deviceready");
-    var result=getUrlParameter("result");
-    alert(result);
-    
-}
+
 

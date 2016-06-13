@@ -55,6 +55,7 @@ function scan(){
 //                "Result: " + result.text + "\n" +
 //                "Format: " + result.format + "\n" +
 //                "Cancelled: " + result.cancelled);
+          alert(result.text);
           window.location="license.html?result="+result.text;
           
       }, 

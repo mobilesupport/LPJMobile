@@ -98,29 +98,7 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.content{
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    top: 10%;
-    
-}
 
-.banner{
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    right: 0%;
-    height: 10%;
-    
-}
-
-.welcometext{
-    position: absolute;
-    top: 2%;
-    right: 0%;
-    color: lightskyblue;
-}
 
 .content2{
     position: absolute;
