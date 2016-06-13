@@ -41,6 +41,12 @@
     <link rel="stylesheet" type="text/css" href="css/license.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
     <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(document).bind('pageinit',function(){
+        alert("fuck l");
+        $.mobile.loadingMessage = false;
+    })
+</script> 
     <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
     <script type="text/javascript" src="barcodescanner.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
@@ -49,23 +55,8 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+     
     <title>License Verification</title>
-    <script type="text/javascript">
-        document.addEventListener("deviceready", onDeviceReady, false);         
-            function onDeviceReady() {
-            alert("onDevice");
-            getvalue();
-                
-        }
-        
-        function getvalue(){
-            alert("getvalue");
-            var result=getUrlParameter("result");
-            alert(result);
-    
-        }
-            
-    </script>
 
 </head>
 
@@ -77,9 +68,108 @@
             <img class="logo" src="img/LPJlogo.png">
         </div>
         
-         <div class="content">
+        <div class="content">
         <div class="banner">
             <span class="welcometext">Welcome [...........]</span>
+        </div>
+        <div class="info">
+            <table class="tableinfo">
+                <tr>
+                    <td>
+                        <span id="span1" class="label"></span>
+                    </td>
+                </tr>
+                <tr class="addborder">
+                    <td>
+                        <span id="span11" class="labelText"></span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <span id="span2" class="label"></span>
+                    </td>
+                </tr>
+                <tr class="addborder">
+                    <td>
+                        <span id="span22" class="labelText"></span>
+                    </td>
+                    
+                </tr><tr>
+                    <td>
+                        <span id="span3" class="label"></span>
+                    </td>
+                </tr>
+                <tr class="addborder">
+                    <td>
+                        <span id="span33" class="labelText"></span>
+                    </td>
+                    
+                </tr><tr>
+                    <td>
+                        <span id="span4" class="label"></span>
+                    </td>
+                </tr>
+                <tr class="addborder">
+                    <td>
+                        <span id="span44" class="labelText"></span>
+                    </td>
+                    
+                </tr><tr>
+                    <td>
+                        <span id="span5" class="label"></span>
+                    </td>
+                </tr>
+                <tr class="addborder">
+                    <td>
+                        <span id="span55" class="labelText"></span>
+                    </td>
+                    
+                </tr><tr>
+                    <td>
+                        <span id="span6" class="label"></span>
+                    </td>
+                </tr>
+                <tr class="addborder">
+                    <td>
+                        <span id="span66" class="labelText"></span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <span id="span7" class="label"></span>
+                    </td>
+                </tr>
+                <tr class="addborder">
+                    <td>
+                        <span id="span77" class="labelText"></span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <span id="span8" class="label"></span>
+                    </td>
+                </tr>
+                <tr id="tr8" class="addborder">
+                    <td>
+                        <span id="span88" class="labelText"></span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <span id="span9" class="label"></span>
+                    </td>
+                </tr>
+                <tr id="tr9" class="addborder">
+                    <td>
+                        <span id="span99" class="labelText"></span>
+                    </td>
+                    
+                </tr>
+            </table>
         </div>
        
         <div class="footer">
@@ -89,5 +179,13 @@
     </div>
    
 </body>
+        <script type="text/javascript">
+       
+        $(document).ready(function(){        
+      
+            getvalue();
+        });
+   
+    </script>
 
 </html>

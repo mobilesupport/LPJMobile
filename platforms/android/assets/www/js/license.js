@@ -19,7 +19,6 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        alert("1");
         this.bindEvents();
         
     },
@@ -28,7 +27,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        alert("2");
+    
         document.addEventListener('deviceready', this.onDeviceReady, false);
         
     },
@@ -37,24 +36,157 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        alert("3");
+      
         app.receivedEvent('deviceready');
         
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        alert("4");
+       
         getvalue();
     }
 };
 
  
-    function getvalue(){
-        alert("getvalue");
-        var result=getUrlParameter("result");
-        alert(result);
+function getvalue(){
+    var sha1key = "123456";
+    var key1 = "123";
+    var key2 = "456";
+    //var result =//"LY|00003|LPJ/LY/16-00004|DA DAN XIA||01/05/2016|01/05/2017|Adam|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|c5c5b93b94aaac6dbbd81b1962d11485a8c9d82f";
+        
+        //"SS|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|EJEN FRET (FREIGHT FORWARDER)|P.G.P|LPJ/PG01/16-00002|20/052016|20/11/2016|1212|2323|00003|47d846e9d973927d7910bf8d61d36c01ee481ef3";
+        
+    //"PJ|SEAGULLS FORWARDING AGENCY SDN BHD|JP 0091|26/05/2016|26/11/2016|LPJ/IP/M/16/2(91)|123123|123|123|123|HAD PELABUHAN PASIR GUDANG|6986fbd549a298dddcaa6c35d6dbedc75d7c3317";
     
+    
+        
+    var result=getUrlParameter("result");
+        
+    var split = result.split("|"); 
+    var value = split.slice(0, split.length - 1).join("|") + "|";     
+    var valuewithkey = key1 +"|" + value +key2 + "|" + sha1key;
+    
+    // hashed value
+    var hashedvalue = SHA1(valuewithkey);
+    
+    if(hashedvalue == split[split.length-1]){
+        
+        loadinfo(split);
     }
+    else{
+        alert("This is not valid license.");
+            
+    }
+}
 
+function loadinfo(split){
+    if(split[0]=="PJ"){
+        PJLicense(split);
+    }
+    else if(split[0]=="SS"){
+        SSLicense(split);
+    }
+    else if(split[0] =="LY"){
+        LYLicense(split);
+    }
+    
+}
 
+function PJLicense(split){
+    
+   $('#span1').text("LESSEN :");
+   $('#span11').text(split[2]);
+    
+   $('#span2').text("NOMBOR PENDAFTARAN :");
+   $('#span22').text(split[5]);
+    
+   $('#span3').text("TARIKH DIKELUARKAN :");
+   $('#span33').text(split[3]);
+    
+   $('#span4').text("TARIKH TAMAT :");
+   $('#span44').text(split[4]);
+    
+   $('#span5').text("NAME PEMEGANG LESEN :");
+   $('#span55').text(split[1]);
+    
+   $('#span6').text("ALAMAT BEROPERASI :");
+   $('#span66').text(split[6]+ ", " + split[7] + ", " + split[8] +", "+ split[9]);
+    
+   $('#span7').text("LOKASI :");
+   $('#span77').text(split[10]);
+    
+   $('#tr8').css({"display":"none"});
+   $('#tr9').css({"display":"none"});
+    
+   showinfo();
+}
+
+function SSLicense(split){
+    
+   $('#span1').text("COMPANY NAME :");
+   $('#span11').text(split[1]);
+    
+   $('#span2').text("COMPANY ADDRESS :");
+   $('#span22').text(split[2] + " " + split[3] + " " + split[4]);
+    
+   $('#span3').text("LESEN CATEGORY/ JENIS LESSEN :");
+   $('#span33').text(split[5]);
+    
+   $('#span4').text("LOCATION/ LOKASI :");
+   $('#span44').text(split[6]);
+    
+   $('#span5').text("REFERENCE NO/ NO.RUJUKAN :");
+   $('#span55').text(split[7]);
+    
+   $('#span6').text("DATE OF ISSUE/ TARIKH DIKELUARKAN :");
+   $('#span66').text(split[8]);
+    
+   $('#span7').text("DATE OF EXPIRY/ TARIKH TAMAT :");
+   $('#span77').text(split[9]);
+    
+   $('#span8').text("PDA NO. :");
+   $('#span88').text(split[10]);
+    
+   $('#span9').text("PDA AUTHO NO. :");
+   $('#span99').text(split[11]);
+    
+   showinfo();
+}
+
+function LYLicense(split){
+    
+   $('#span1').text("NO LESEN :");
+   $('#span11').text(split[1]);
+    
+   $('#span2').text("NO CASE :");
+   $('#span22').text(split[2]);
+    
+   $('#span3').text("NAMA KAPAL :");
+   $('#span33').text(split[3]);
+    
+   $('#span4').text("MSSI NO :");
+   $('#span44').text(split[4]);
+    
+   $('#span5').text("TARIKH DIKELUARKAN :");
+   $('#span55').text(split[5]);
+    
+   $('#span6').text("TARIKH TAMAT :");
+   $('#span66').text(split[6]);
+    
+   $('#span7').text("NAMA PEMILIK :");
+   $('#span77').text(split[7]);
+    
+   $('#span8').text("NAMA AGENSI :");
+   $('#span88').text(split[8]);
+    
+   $('#span9').text("ALAMAT :");
+   $('#span99').text(split[9]+ " " + split[10]+ " " + split[11]);
+    
+   showinfo();
+}
+
+function showinfo(){
+    $(".info").css({"display": "block"});
+ 
+}
 
