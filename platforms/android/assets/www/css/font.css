@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aver'; /*a name to be used later*/
+    src: url('font/Aver.TTF'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Newcicle'; /*a name to be used later*/
+    src: url('font/Newcicle.TTF'); /*URL to font*/
+}
