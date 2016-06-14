@@ -18,29 +18,32 @@
  */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    
 }
 
+
+
 body {
+    
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     
     background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
     width:100%;
+    overflow: hidden;
+    
 }
 
 /* Portrait layout (default) */
 .app {
     
     height: 100%;
-    width: 100%;
-    background-color: white;
+    width: 100%;  
+    background-color: #215BE2;
 }
 
 /* Landscape layout (with min-width) */
@@ -51,34 +54,6 @@ body {
         margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
                                       /* offset horizontal: half of image width and text area width */
     }
-}
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
 }
 
 @keyframes fade {
@@ -105,42 +80,50 @@ h1 {
     top: 10%;
     width: 100%;
     height: 90%;
+    background-color: #215BE2;
     
 }
 
 .imgLicense{
     width: 30vw;
     height: 30vw;
-    position: absolute;
-    left: 10%;
-    top: 5%;
-    padding:1px;
-    border: medium solid;
-    border-color: deepskyblue;
 }
 
 .imgRegister{
     
     width: 30vw;
     height: 30vw;
-    position: absolute;
-    right: 10%;
-    top: 5%;
-    padding: 1px;
+}
+
+.tdWidth{
+    width: 10vw;
+}
+
+.licensebtn{
+    
+    background-color: white;
+    outline: none;
     border: medium solid;
     border-color: deepskyblue;
-}
-
-.footer{
-    width: 100%;
-    height: 3%;
+    color: black;
     position: absolute;
-    bottom: 0px;
-    background-color: deepskyblue;
-    
+    top: 5%;
+    left: 8%;
+    width: 40vw;
+    height: 40vw;
+    font-family: "Aver";
 }
 
-.footertext{
-    color:white;
-    text-transform: none;
+.registerbtn{
+    background-color: white;
+    outline: none;
+    border: medium solid;
+    border-color: deepskyblue;
+    color: black;
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    width: 40vw;
+    height: 40vw;
+    font-family: "Aver";
 }

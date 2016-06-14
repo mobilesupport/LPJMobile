@@ -19,20 +19,28 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
+@font-face {
+    font-family: 'Newcicle'; /*a name to be used later*/
+    src: url('../font/Newcicle.TTF'); /*URL to font*/
+}
 
+@font-face {
+    font-family: 'Aver'; /*a name to be used later*/
+    src: url('../font/Aver.TTF'); /*URL to font*/
+}
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     
     background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
     height:100%;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
     width:100%;
+    background-color: #215BE2;
+    overflow: hidden;
 }
 
 /* Portrait layout (default) */
@@ -40,7 +48,6 @@ body {
     
     height: 100%;
     width: 100%;
-    background-color: white;
 }
 
 /* Landscape layout (with min-width) */
@@ -108,60 +115,73 @@ h1 {
     width: 100%;
     height: 10%;
     position: absolute;
-    top: 30%;
+    top: 35%;
+  
 }
 
 
 .content{
     width: 100%;
-    height: 45%;
+    height: 37%;
     position: absolute;
-    top: 45%;
+    top: 60%;
+
 }
 
 .txtUserId{
-    width: 60%;
+    width: 90%;
+    height: 10vw;
     text-align: center;
     outline: none;
     border-top: none;
     border-right: none;
     border-left: none;
     position: absolute;
-    top: 0%;
-    left: 20%;
+    top:0%;
+    left: 5%;
+    font-size: 6.5vw;
+    font-family: 'Newcicle';
 }
 
 .txtPassword{
-    width: 60%;
+    width: 90%;
+    height: 10vw;
     text-align: center;
     outline: none;
     border-top: none;
     border-left: none;
     border-right: none;
     position: absolute;
-    top: 15%;
-    left: 20%;
+    top: 20%;
+    left: 5%;
+    font-size: 6.5vw;
+    font-family: 'Newcicle';
 }
 
 .btnSignIn{
-    width: 80%;
-    height: 8%;
+    width: 90%;
+    height: 13vw;
     text-align: center;
     outline: none;
-    top: 30%;
-    left: 10%;
-    background-color: deepskyblue;
+    top: 46%;
+    left: 5%;
+    background-color: dodgerblue;
     color: white;
     border: none;
     position: absolute;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 6.5vw;
+    font-family: 'Newcicle';
 }
 
 .center{
     text-align: center;
     position: absolute;
-    top: 45%;
+    bottom: 3%;
     width: 100%;
+}
+
+.centertext{
+    font-size: 4vw;
 }
 
 span{
@@ -174,12 +194,29 @@ span{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 3%;
-    background-color: deepskyblue;
+    height: 5vw;
+    background-color: white;
 }
 
 .footertext{
-    color: white;
+    color: black;
     text-transform: none;
-    font-size: 2.5vw;
+    font-size: 4vw;
+    font-family: "Aver";
+}
+
+.ImgMid{
+    text-align: center;
+}
+
+.LogoImg{
+    
+    width: 45vw;
+    height: auto;
+}
+
+.name{
+    font-size: 6vw;
+    color: white;
+    font-family: "Aver";
 }

@@ -74,7 +74,7 @@ function getvalue(){
         loadinfo(split);
     }
     else{
-        alert("This is not valid license.");
+        alert("This QR code is not supported\n Please try again");
         window.location="home.html";
             
     }
