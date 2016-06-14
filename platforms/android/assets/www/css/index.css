@@ -21,12 +21,12 @@
 }
 @font-face {
     font-family: 'Newcicle'; /*a name to be used later*/
-    src: url('../font/Newcicle.TTF'); /*URL to font*/
+    src: url('../css/font/Newcicle.TTF'); /*URL to font*/
 }
 
 @font-face {
     font-family: 'Aver'; /*a name to be used later*/
-    src: url('../font/Aver.TTF'); /*URL to font*/
+    src: url('../css/font/Aver.TTF'); /*URL to font*/
 }
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
