@@ -38,8 +38,7 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <link rel="stylesheet" type="text/css" href="css/license.css" />
-    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    
     <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
     
     <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
@@ -49,6 +48,9 @@
     $(".ui-loader").hide();
 });
 </script> 
+    <link rel="stylesheet" type="text/css" href="css/license.css" />
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
     <script type="text/javascript" src="barcodescanner.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/license.js"></script>
@@ -62,18 +64,18 @@
 </head>
 
 <body>
-    <div class="app">
+    <div class="apps">
         <div class="header">
-            <span class="headertext">LICENSE VERIFICATION</span>
-            <hr class="blueline">
+            <span class="headertxt">LICENSE VERIFICATION</span>
+      
             <img class="logo" src="img/LPJlogo.png">
         </div>
-        
-        <div class="content">
-        <div class="banner">
-            <span class="welcometext">Welcome [...........]</span>
-        </div>
-        <div class="info">
+        <div class="contentinfo">
+            <hr class="blueline">
+            <div class="bannerlicense">
+                <span class="welcometextlicense">Welcome [...........]</span>
+            </div>
+           <div class="info">
             <table class="tableinfo">
                 <tr>
                     <td>
@@ -82,7 +84,7 @@
                 </tr>
                 <tr class="addborder">
                     <td>
-                        <span id="span11" class="labelText"></span>
+                        <center id="span11" class="labelText"></center>
                     </td>
                     
                 </tr>
@@ -93,7 +95,7 @@
                 </tr>
                 <tr class="addborder">
                     <td>
-                        <span id="span22" class="labelText"></span>
+                        <center id="span22" class="labelText"></center>
                     </td>
                     
                 </tr><tr>
@@ -103,7 +105,7 @@
                 </tr>
                 <tr class="addborder">
                     <td>
-                        <span id="span33" class="labelText"></span>
+                        <center id="span33" class="labelText"></center>
                     </td>
                     
                 </tr><tr>
@@ -113,7 +115,7 @@
                 </tr>
                 <tr class="addborder">
                     <td>
-                        <span id="span44" class="labelText"></span>
+                        <center id="span44" class="labelText"></center>
                     </td>
                     
                 </tr><tr>
@@ -123,7 +125,7 @@
                 </tr>
                 <tr class="addborder">
                     <td>
-                        <span id="span55" class="labelText"></span>
+                        <center id="span55" class="labelText"></center>
                     </td>
                     
                 </tr><tr>
@@ -133,7 +135,7 @@
                 </tr>
                 <tr class="addborder">
                     <td>
-                        <span id="span66" class="labelText"></span>
+                        <center id="span66" class="labelText"></center>
                     </td>
                     
                 </tr>
@@ -144,7 +146,7 @@
                 </tr>
                 <tr class="addborder">
                     <td>
-                        <span id="span77" class="labelText"></span>
+                        <center span id="span77" class="labelText">></center>
                     </td>
                     
                 </tr>
@@ -155,7 +157,7 @@
                 </tr>
                 <tr id="tr8" class="addborder">
                     <td>
-                        <span id="span88" class="labelText"></span>
+                        <center id="span88" class="labelText"></center>
                     </td>
                     
                 </tr>
@@ -166,17 +168,21 @@
                 </tr>
                 <tr id="tr9" class="addborder">
                     <td>
-                        <span id="span99" class="labelText"></span>
+                        <center id="span99" class="labelText"></center>
                     </td>
                     
                 </tr>
             </table>
         </div>
-       
-        <div class="footer">
-            <center class="footertext">Powered by Projek Sistematik Sdn. Bhd</center>
+            <div class="buttonlist">
+                <button class="btnhome" onclick="home_onclick();"><img src="img/home.png" class="homeimg"></button>
+                 <button class="btnqr"><img src="img/scanqr.png" class="qrimg"></button>
+                <button class="btncom"><img src="img/registeredcom.png" class="comimg"></button>
+            </div>
+            <div class="footer">
+                <center class="footertext">Powered by Projek Sistematik Sdn. Bhd</center>
+            </div>
         </div>
-    </div>
     </div>
    
 </body>
