@@ -51,10 +51,12 @@
     <link rel="stylesheet" type="text/css" href="css/license.css" />
     <link rel="stylesheet" type="text/css" href="css/font.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
     <script type="text/javascript" src="barcodescanner.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/license.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/slidemenu.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>
@@ -69,7 +71,12 @@
             <span class="headertxt">LICENSE VERIFICATION</span>
       
             <img class="logo" src="img/LPJlogo.png">
+            <button class="MenuBtn"><img class="ImageMenu" src="img/menu.png"></button>
         </div>
+          <div class="menubg">
+                    <ul id="slidemenu">
+                    </ul>    
+            </div>
         <div class="contentinfo">
             <hr class="blueline">
             <div class="bannerlicense">
@@ -188,11 +195,12 @@
 </body>
         <script type="text/javascript">
        
-//        $(document).ready(function(){        
-//      
-//            getvalue(123);
-//        });
-   
+ $(document).ready(function(){
+        
+            slideMenu.initSlideMenu();
+            $(".menubg").css({"top":"11%"});
+            
+        });
     </script>
 
 </html>

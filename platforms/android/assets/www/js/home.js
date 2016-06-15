@@ -46,14 +46,14 @@ function scan(){
     window.location="license.html";
 }
 
-function pageSwipeLeft(){
-    if(menuStatus){
-        $("body").on("swipeleft", function(){
-            if (menuStatus){	
-            $(".menubg").animate({
-                marginLeft: "-50%",
-              }, 300, function(){menuStatus = false});
-              }
-        });
-    }
-}
+//function pageSwipeLeft(){
+//    if(menuStatus){
+//        $("body").on("swipeleft", function(){
+//            if (menuStatus){	
+//            $(".menubg").animate({
+//                marginLeft: "-50%",
+//              }, 300, function(){menuStatus = false});
+//              }
+//        });
+//    }
+//}
