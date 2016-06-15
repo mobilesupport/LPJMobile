@@ -144,6 +144,8 @@ function PJLicense(split){
     
    $('#tr8').css({"display":"none"});
    $('#tr9').css({"display":"none"});
+    $('#tr88').css({"display":"none"});
+   $('#tr99').css({"display":"none"});
     
    showinfo();
 }
