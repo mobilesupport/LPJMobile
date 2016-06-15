@@ -142,12 +142,8 @@ function PJLicense(split){
    $('#span7').text("LOKASI :");
    $('#span77').text(split[10]);
     
-   $('#tr8').css({"display":"none"});
-   $('#tr9').css({"display":"none"});
-    $('#tr88').css({"display":"none"});
-   $('#tr99').css({"display":"none"});
-    
-   showinfo();
+    hidetr();
+    showinfo();
 }
 
 function SSLicense(split){
@@ -179,6 +175,7 @@ function SSLicense(split){
    $('#span9').text("PDA AUTHO NO. :");
    $('#span99').text(split[11]);
     
+   showtr();    
    showinfo();
 }
 
@@ -211,12 +208,27 @@ function LYLicense(split){
    $('#span9').text("ALAMAT :");
    $('#span99').text(split[9]+ " " + split[10]+ " " + split[11]);
     
+   showtr();
    showinfo();
 }
 
 function showinfo(){
     $(".info").css({"display": "block"});
  
+}
+
+function hidetr(){
+   $('#tr8').css({"display":"none"});
+   $('#tr9').css({"display":"none"});
+   $('#tr88').css({"display":"none"});
+   $('#tr99').css({"display":"none"});
+}
+
+function showtr(){
+   $('#tr8').css({"display":"block"});
+   $('#tr9').css({"display":"block"});
+   $('#tr88').css({"display":"block"});
+   $('#tr99').css({"display":"block"});
 }
 
 function home_onclick(){
