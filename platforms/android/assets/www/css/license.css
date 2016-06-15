@@ -81,6 +81,7 @@ body {
     height: 90%;
     display: none;
     background-color: transparent;
+    overflow: scroll;
 }
 
 .tableinfo{
