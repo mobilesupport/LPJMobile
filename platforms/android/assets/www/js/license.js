@@ -43,12 +43,37 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
        
-        getvalue();
+        scan();
+       // getvalue();
     }
 };
 
- 
-function getvalue(){
+function scan(){
+    cordova.plugins.barcodeScanner.scan(
+      function (result) {
+//          alert("We got a barcode\n" +
+//                "Result: " + result.text + "\n" +
+//                "Format: " + result.format + "\n" +
+//                "Cancelled: " + result.cancelled);
+         getvalue(result.text);
+          
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      },
+      {
+         
+          "showFlipCameraButton" : true, // iOS and Android 
+          "prompt" : "Place a barcode inside the scan area", // supported on Android only 
+          "formats" : "QR_CODE", // default: all but PDF_417 and RSS_EXPANDED 
+         
+      }
+   );
+    
+} 
+
+
+function getvalue(QRresult){
     $(".btnqr").css({"background-color": "#bdcef6"});
     var sha1key = "123456";
     var key1 = "123";
@@ -61,7 +86,7 @@ function getvalue(){
     
     
         
-    var result=getUrlParameter("result");
+    var result=QRresult;
         
     var split = result.split("|"); 
     var value = split.slice(0, split.length - 1).join("|") + "|";     
