@@ -78,7 +78,7 @@ function getvalue(QRresult){
     var sha1key = "123456";
     var key1 = "123";
     var key2 = "456";
-    //var result =//"LY|00003|LPJ/LY/16-00004|DA DAN XIA||01/05/2016|01/05/2017|Adam|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|c5c5b93b94aaac6dbbd81b1962d11485a8c9d82f";
+    var result =//"LY|00003|LPJ/LY/16-00004|DA DAN XIA||01/05/2016|01/05/2017|Adam|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|c5c5b93b94aaac6dbbd81b1962d11485a8c9d82f";
     
        //"SS|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|EJEN FRET (FREIGHT FORWARDER)|P.G.P|LPJ/PG01/16-00002|20/052016|20/11/2016|1212|2323|00003|47d846e9d973927d7910bf8d61d36c01ee481ef3";
         
@@ -218,17 +218,19 @@ function showinfo(){
 }
 
 function hidetr(){
-   $('#tr8').css({"display":"none"});
-   $('#tr9').css({"display":"none"});
-   $('#tr88').css({"display":"none"});
-   $('#tr99').css({"display":"none"});
+    $("#tr8").hide();
+    $("#tr88").hide();
+    $("#tr9").hide();
+    $("#tr99").hide();
+
 }
 
 function showtr(){
-   $('#tr8').css({"display":"block"});
-   $('#tr9').css({"display":"block"});
-   $('#tr88').css({"display":"block"});
-   $('#tr99').css({"display":"block"});
+
+    $("#tr8").show();
+    $("#tr88").show();
+    $("#tr9").show();
+    $("#tr99").show();
 }
 
 function home_onclick(){

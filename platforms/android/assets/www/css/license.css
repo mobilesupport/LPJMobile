@@ -99,6 +99,11 @@ body {
     border-bottom: 1px solid black;
 
 }
+.addborder2 td {
+
+    border-bottom: 1px solid black;
+
+}
 
 .headertxt{
     font-size: 6vw;
