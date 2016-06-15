@@ -40,7 +40,7 @@ body {
 
 /* Portrait layout (default) */
 .apps {
-    
+    position: absolute;
     height: 100%;
     width: 100%;  
     background-color: white;
@@ -197,4 +197,8 @@ body {
     top: 50%;
     right: 0%;
     color: #215BE2;
+}
+
+.container{
+    position: relative;
 }
