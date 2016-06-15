@@ -42,7 +42,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-       
+        document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
         scan();
        // getvalue();
     }
