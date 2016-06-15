@@ -37,39 +37,23 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+       
     }
 };
 
 function scan(){
     
     window.location="license.html";
-//      cordova.plugins.barcodeScanner.scan(
-//      function (result) {
-////          alert("We got a barcode\n" +
-////                "Result: " + result.text + "\n" +
-////                "Format: " + result.format + "\n" +
-////                "Cancelled: " + result.cancelled);
-//          window.location="license.html?result="+result.text;
-//          
-//      }, 
-//      function (error) {
-//          alert("Scanning failed: " + error);
-//      },
-//      {
-//         
-//          "showFlipCameraButton" : true, // iOS and Android 
-//          "prompt" : "Place a barcode inside the scan area", // supported on Android only 
-//          "formats" : "QR_CODE", // default: all but PDF_417 and RSS_EXPANDED 
-//         
-//      }
-//   );
-    
+}
+
+function pageSwipeLeft(){
+    if(menuStatus){
+        $("body").on("swipeleft", function(){
+            if (menuStatus){	
+            $(".menubg").animate({
+                marginLeft: "-50%",
+              }, 300, function(){menuStatus = false});
+              }
+        });
+    }
 }

@@ -75,3 +75,20 @@
     right: 0%;
     color: white;
 }
+
+.MenuBtn{
+    position: absolute;
+    right: 0px;
+    border: none;
+    background-color: transparent;
+    height: 80%;
+    width: auto;
+    top: 10%;
+    outline: none;
+}
+
+.ImageMenu{
+    height: 50%;
+    width: auto;
+    outline: none;
+}

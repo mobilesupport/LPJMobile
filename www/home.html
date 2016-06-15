@@ -41,10 +41,21 @@
     <link rel="stylesheet" type="text/css" href="css/home.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
     <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
+     <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript">
+   $(document).ready( function() {
+
+    $(".ui-loader").hide();
+});
+</script> 
      <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/barcodescanner.js"></script>
      <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/slidemenu.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>
@@ -56,8 +67,13 @@
     <div class="app">
         <div class="header">
             <span class="headertext">HOME</span>
+            <button class="MenuBtn"><img class="ImageMenu" src="img/menu.png"></button>
             <img class="logo" src="img/LPJlogo.png">
         </div>
+        <div class="menubg">
+                    <ul id="slidemenu">
+                    </ul>    
+            </div>
         <div class="content">
             <div class="banner">
                 <span class="welcometext">Welcome [...........]</span>
@@ -71,12 +87,20 @@
                     <br/>Registered Company</button>
             </div>
             <div class="footer">
-                <center class="footertext">Powered by Projek Sistematik Sdn. Bhd</center>
+                <center class="footertext">Powered by Projek Sistematik Sdn. Bhd - V1.0</center>
             </div>
         </div>
     </div>
    
    
 </body>
+    
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var menustatus;
+            slideMenu.initSlideMenu();
+            
+        });
+</script>
 
 </html>
