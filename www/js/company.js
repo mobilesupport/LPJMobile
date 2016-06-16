@@ -45,11 +45,16 @@ var app = {
     });
         
         
-     $('.btnhome').on('touchstart click', function(e){
-    e.stopPropagation(); e.preventDefault();
-        window.location="home.html";
-
-    });
+//     $('.btnhome').on('touchstart click', function(e){
+//    e.stopPropagation(); e.preventDefault();
+//        window.location="home.html";
+//
+//    });
+        
+        $('.btnhome').bind('vclick click',function(e){
+            e.preventDefault();
+            window.location="home.html";
+        })
     }
 };
 
