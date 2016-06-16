@@ -45,6 +45,22 @@ var app = {
         
         scan();
        // getvalue();
+        
+        
+        $('.btnqr').on('touchstart click', function(e){
+        e.stopPropagation(); e.preventDefault();
+        scan();
+    });
+        
+        $('.btnhome').on('touchstart click', function(e){
+        e.stopPropagation(); e.preventDefault();
+        window.location="home.html";
+    });
+        
+        $('.btncom').on('touchstart click', function(e){
+        e.stopPropagation(); e.preventDefault();
+        window.location="company.html";
+    });
     }
 };
 
