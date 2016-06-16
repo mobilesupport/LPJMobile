@@ -38,7 +38,7 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="css/company.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
     <link rel="stylesheet" type="text/css" href="css/font.css" />
     <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
@@ -52,7 +52,7 @@
 });
 </script> 
      <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/company.js"></script>
     <script type="text/javascript" src="js/barcodescanner.js"></script>
      <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/slidemenu.js"></script>
@@ -66,7 +66,7 @@
 <body>
     <div class="app">
         <div class="header">
-            <span class="headertext">HOME</span>
+            <span class="headertext">REGISTERED COMPANY</span>
             <button class="MenuBtn"><img class="ImageMenu" src="img/menu.png"></button>
             <img class="logo" src="img/LPJlogo.png">
         </div>
@@ -74,17 +74,19 @@
                     <ul id="slidemenu">
                     </ul>    
             </div>
-        <div class="content">
+        <div class="contentcom">
             <div class="banner">
-                <span class="welcometext">Welcome [...........]</span>
+                <span class="welcometextblue">Welcome [...........]</span>
             </div>
-            <div class="content2">
-                <button class="licensebtn" onclick="scan();"><img src="img/licenseicon.png" class="imgLicense">
-                    <br/>License Verification</button>
-            
-            
-                 <button class="registerbtn" onclick="com_onclick();"><img src="img/registericon.jpg" class="imgRegister">
-                    <br/>Registered Company</button>
+            <div class="searchdiv">
+                <center class="centertxt">Please enter your company registration number</center>
+                <input type="text" class="inputcom">
+                <button class="btnsearch">Search</button>
+            </div>
+             <div class="buttonlist">
+                <button class="btnhome" onclick="home_onclick();"><img src="img/home.png" class="homeimg"></button>
+                <button class="btnqr" onclick="scan();"><img src="img/scanqr.png" class="qrimg"></button>
+                <button class="btncom"><img src="img/registeredcom.png" class="comimg"></button>
             </div>
             <div class="footer">
                 <center class="footertext">Powered by Projek Sistematik Sdn. Bhd - V1.0</center>

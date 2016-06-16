@@ -45,6 +45,9 @@ function scan(){
     
     window.location="license.html";
 }
+function com_onclick(){
+    window.location="company.html";
+}
 
 //function pageSwipeLeft(){
 //    if(menuStatus){

@@ -79,7 +79,7 @@ body {
     position: absolute;
     top: 10%;
     width: 100%;
-    height: 75%;
+    height: 80%;
     display: none;
     background-color: transparent;
     overflow: scroll;
@@ -106,13 +106,7 @@ body {
 
 }
 
-.headertxt{
-    font-size: 6vw;
-    position: absolute;
-    left: 25%;
-    top: 30%;
-    font-family: "Aver";
-}
+
 
 .label{
     color: black;
@@ -158,7 +152,7 @@ body {
     position: absolute;
     left: 33%;
     bottom: 4%;
-    background-color: #215BE2;
+    background-color: #bdcef6;
     width: 33%;
     height: 7%;
     outline: none;
@@ -179,26 +173,4 @@ body {
     height: 7%;
     outline: none;
     border: 1px solid white;
-}
-
-
-.bannerlicense{
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    right: 0%;
-    height: 5%;
-    background-color: transparent;
-    
-}
-
-.welcometextlicense{
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    color: #215BE2;
-}
-
-.container{
-    position: relative;
 }

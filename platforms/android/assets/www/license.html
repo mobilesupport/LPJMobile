@@ -68,7 +68,7 @@
 <body>
     <div class="apps">
         <div class="header">
-            <span class="headertxt">LICENSE VERIFICATION</span>
+            <span class="headertext">LICENSE VERIFICATION</span>
       
             <img class="logo" src="img/LPJlogo.png">
             <button class="MenuBtn"><img class="ImageMenu" src="img/menu.png"></button>
@@ -78,9 +78,8 @@
                     </ul>    
             </div>
         <div class="contentinfo">
-            <hr class="blueline">
-            <div class="bannerlicense">
-                <span class="welcometextlicense">Welcome [...........]</span>
+            <div class="banner">
+                <span class="welcometextblue">Welcome [...........]</span>
             </div>
            <div class="info">
             <table class="tableinfo">
@@ -184,7 +183,7 @@
             <div class="buttonlist">
                 <button class="btnhome" onclick="home_onclick();"><img src="img/home.png" class="homeimg"></button>
                  <button class="btnqr" onclick="scan();"><img src="img/scanqr.png" class="qrimg"></button>
-                <button class="btncom"><img src="img/registeredcom.png" class="comimg"></button>
+                <button class="btncom" onclick="com_onclick();"><img src="img/registeredcom.png" class="comimg"></button>
             </div>
             <div class="footer">
                 <center class="footertext">Powered by Projek Sistematik Sdn. Bhd</center>
@@ -196,10 +195,7 @@
         <script type="text/javascript">
        
  $(document).ready(function(){
-        
-            slideMenu.initSlideMenu();
-            $(".menubg").css({"top":"11%"});
-            
+            slideMenu.initSlideMenu();            
         });
     </script>
 

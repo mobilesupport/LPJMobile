@@ -75,7 +75,7 @@ function scan(){
 
 
 function getvalue(QRresult){
-    $(".btnqr").css({"background-color": "#bdcef6"});
+//    $(".btnqr").css({"background-color": "#bdcef6"});
     var sha1key = "123456";
     var key1 = "123";
     var key2 = "456";
@@ -236,4 +236,8 @@ function showtr(){
 
 function home_onclick(){
     window.location = "home.html";
+}
+
+function com_onclick(){
+    window.location = "company.html";
 }

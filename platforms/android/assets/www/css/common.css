@@ -27,7 +27,7 @@
 }
 
 .headertext{
-    font-size: 10vw;
+    font-size: 6vw;
     position: absolute;
     left: 25%;
     top: 30%;
@@ -66,16 +66,23 @@
     right: 0%;
     height: 5%;
     background-color: transparent;
+    border-top: 3px solid #215BE2;
     
 }
 
 .welcometext{
     position: absolute;
-    top: 2%;
+    top: 5%;
     right: 0%;
     color: white;
 }
 
+.welcometextblue{
+     position: absolute;
+    top: 5%;
+    right: 0%;
+    color: #215BE2;
+}
 .MenuBtn{
     position: absolute;
     right: 0px;

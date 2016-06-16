@@ -34,41 +34,18 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+       document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
     }
 };
 
 function scan(){
-      cordova.plugins.barcodeScanner.scan(
-      function (result) {
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
-          window.location="licenseDetial.html?result="+result.text;
-          
-      }, 
-      function (error) {
-          alert("Scanning failed: " + error);
-      },
-      {
-         
-          "showFlipCameraButton" : true, // iOS and Android 
-          "prompt" : "Place a barcode inside the scan area", // supported on Android only 
-          "formats" : "QR_CODE,", // default: all but PDF_417 and RSS_EXPANDED 
-         
-      }
-   );
     
+    window.location="license.html";
+}
+
+function home_onclick(){
+    window.location="home.html";
 }
