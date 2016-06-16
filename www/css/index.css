@@ -40,6 +40,8 @@ body {
     
     height: 100%;
     width: 100%;
+    position: absolute;
+    overflow: hidden;
 }
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
