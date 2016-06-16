@@ -40,10 +40,16 @@ var app = {
         
     $('.btnqr').on('touchstart click', function(e){
     e.stopPropagation(); e.preventDefault();
-    alert("ds");
         window.location="license.html";
 
-});
+    });
+        
+        
+     $('.btnhome').on('touchstart click', function(e){
+    e.stopPropagation(); e.preventDefault();
+        window.location="home.html";
+
+    });
     }
 };
 

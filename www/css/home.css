@@ -41,6 +41,8 @@ body {
     height: 100%;
     width: 100%;  
     background-color: #215BE2;
+    position: absolute;
+    overflow: hidden;
 }
 
 /* Landscape layout (with min-width) */

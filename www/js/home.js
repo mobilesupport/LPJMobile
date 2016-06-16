@@ -37,14 +37,22 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-       document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
+
+        
+        $('.licensebtn').on('touchstart click', function(e){
+        e.stopPropagation(); e.preventDefault();
+        window.location="license.html";
+    });
+        
+        $('.registerbtn').on('touchstart click', function(e){
+        e.stopPropagation(); e.preventDefault();
+        window.location="company.html";
+    });
+        
+        
     }
 };
 
-function scan(){
-    
-    window.location="license.html";
-}
 function com_onclick(){
     window.location="company.html";
 }
