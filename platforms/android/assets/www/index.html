@@ -37,7 +37,15 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+  <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript">
+   $(document).ready( function() {
 
+    $(".ui-loader").hide();
+});
+</script> 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/font.css" />
     
@@ -80,7 +88,8 @@
     </script>
 </body>
     <script type="text/javascript">
-        $(document).one("mobileinit", function () {
+    $(document).one("mobileinit", function () {
+        alert("fc");
     $.mobile.pageContainer = $('.app');
     $.mobile.defaultPageTransition = 'slide';
 });
