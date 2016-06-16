@@ -38,15 +38,12 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
     
-    signin_onclick();    
+     $('.btnSignIn').on('touchstart click', function(e){
+            e.stopPropagation(); e.preventDefault();
+            window.location="home.html";
+        });   
         
 
     }
 };
 
-function signin_onclick(){
-        $('.btnSignIn').on('touchstart click', function(e){
-            e.stopPropagation(); e.preventDefault();
-            window.location="home.html";
-        });
-}
