@@ -38,11 +38,11 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
     
-     $('.btnSignIn').on('touchstart click', function(e){
-            e.stopPropagation(); e.preventDefault();
-            window.location="home.html";
-        });   
-        
+//     $('.btnSignIn').on('touchstart click', function(e){
+//            e.stopPropagation(); e.preventDefault();
+//            window.location="home.html";
+//        });   
+//        
 
     }
 };
