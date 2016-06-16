@@ -37,7 +37,14 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-       document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
+        
+    $('.btnqr').on('tap', function(e){
+	e.preventDefault();
+	
+	window.location="license.html";
+	
+	return false;
+});
     }
 };
 
