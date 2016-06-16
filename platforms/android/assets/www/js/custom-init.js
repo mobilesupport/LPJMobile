@@ -1,3 +1,3 @@
 $(document).bind("mobileinit", function() { 
-    $.mobile.defaultPageTransition = "slide";
+    $.mobile.defaultPageTransition = "fade";
 });
