@@ -100,5 +100,11 @@
             slideMenu.initSlideMenu();
         });
 </script>
+    <script type="text/javascript">
+    $(document).one("mobileinit", function () {
+    $.mobile.pageContainer = $('.app');
+    $.mobile.defaultPageTransition = 'slide';
+});
+    </script>
 
 </html>
