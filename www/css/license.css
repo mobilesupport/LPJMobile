@@ -110,12 +110,10 @@ body {
 
 .label{
     color: black;
-    font-family: "Newcicle";
 }
 .labelText{
     color: black;
     font-weight: bold;
-    font-family: "Newcicle";
     width: 50%;
     padding-left: 25%;
 }
