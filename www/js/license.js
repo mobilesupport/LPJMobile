@@ -124,6 +124,8 @@ function getvalue(QRresult){
 }
 
 function loadinfo(split){
+    changeblack();
+    
     if(split[0]=="PJ"){
         PJLicense(split);
     }
@@ -255,6 +257,12 @@ function compareDate(expirydate,lictype){
           $("#span66").css({"color":"red"});
       }
   }
+}
+
+function changeblack(){
+    $("#span44").css({"color":"black"});
+    $("#span77").css({"color":"black"});
+    $("#span66").css({"color":"black"});
 }
 
 function showinfo(){
