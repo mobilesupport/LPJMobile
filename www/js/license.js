@@ -140,7 +140,7 @@ function loadinfo(split){
 
 function PJLicense(split){
     
-   $('.lictype').text("Private Jetty Lesen");
+   $('.lictype').text("Lesen Jeti Persendirian");
     
    $('#span1').text("LESEN :");
    $('#span11').text(split[2]);
@@ -170,7 +170,7 @@ function PJLicense(split){
 
 function SSLicense(split){
     
-    $('.lictype').text("Support Service Lesen");
+    $('.lictype').text("Lesen Sokongan");
     
    $('#span1').text("NAMA SYARIKAT :");
    $('#span11').text(split[1]);
@@ -205,7 +205,7 @@ function SSLicense(split){
 }
 
 function LYLicense(split){
-   $('.lictype').text("Lay Up Lesen");
+   $('.lictype').text("Lesen Lay Up");
     
    $('#span1').text("NO LESEN :");
    $('#span11').text(split[1]);
