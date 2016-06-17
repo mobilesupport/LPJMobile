@@ -95,7 +95,7 @@ function getvalue(QRresult){
     var sha1key = "123456";
     var key1 = "123";
     var key2 = "456";
-   // var result ="LY|00003|LPJ/LY/16-00004|DA DAN XIA||01/05/2016|01/05/2017|Adam|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|c5c5b93b94aaac6dbbd81b1962d11485a8c9d82f";
+    var result ="LY|00003|LPJ/LY/16-00004|DA DAN XIA||01/05/2016|01/05/2017|Adam|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|c5c5b93b94aaac6dbbd81b1962d11485a8c9d82f";
     
       // "SS|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|EJEN FRET (FREIGHT FORWARDER)|P.G.P|LPJ/PG01/16-00002|20/052016|20/11/2016|1212|2323|00003|47d846e9d973927d7910bf8d61d36c01ee481ef3";
         
@@ -103,7 +103,7 @@ function getvalue(QRresult){
     
     
         
-    var result=QRresult;
+   // var result=QRresult;
         
     var split = result.split("|"); 
     var value = split.slice(0, split.length - 1).join("|") + "|";     
@@ -140,7 +140,7 @@ function PJLicense(split){
     
    $('.lictype').text("Private Jetty Lesen");
     
-   $('#span1').text("LESSEN :");
+   $('#span1').text("LESEN :");
    $('#span11').text(split[2]);
     
    $('#span2').text("NOMBOR PENDAFTARAN :");
@@ -151,6 +151,7 @@ function PJLicense(split){
     
    $('#span4').text("TARIKH TAMAT :");
    $('#span44').text(split[4]);
+     compareDate(split[4],'PJ');
     
    $('#span5').text("NAME PEMEGANG LESEN :");
    $('#span55').text(split[1]);
@@ -169,13 +170,13 @@ function SSLicense(split){
     
     $('.lictype').text("Support Service Lesen");
     
-   $('#span1').text("COMPANY NAME :");
+   $('#span1').text("NAMA SYARIKAT :");
    $('#span11').text(split[1]);
     
-   $('#span2').text("COMPANY ADDRESS :");
+   $('#span2').text("ALAMAT SYARIKAT :");
    $('#span22').text(split[2] + " " + split[3] + " " + split[4]);
     
-   $('#span3').text("JENIS LESSEN :");
+   $('#span3').text("JENIS LESEN :");
    $('#span33').text(split[5]);
     
    $('#span4').text("LOKASI :");
@@ -189,6 +190,7 @@ function SSLicense(split){
     
    $('#span7').text("TARIKH TAMAT :");
    $('#span77').text(split[9]);
+    compareDate(split[9],'SS');
     
    $('#span8').text("PDA NO. :");
    $('#span88').text(split[10]);
@@ -220,6 +222,7 @@ function LYLicense(split){
     
    $('#span6').text("TARIKH TAMAT :");
    $('#span66').text(split[6]);
+   compareDate(split[6],'LY');
     
    $('#span7').text("NAMA PEMILIK :");
    $('#span77').text(split[7]);
@@ -234,10 +237,31 @@ function LYLicense(split){
    showinfo();
 }
 
+function compareDate(expirydate,lictype){
+ var x =expirydate;
+ var a = x.split('/');
+ var date = new Date (a[2], a[1] - 1,a[0]);//using a[1]-1 since Date object has month from 0-11
+ var Today = new Date();
+
+ if (date < Today)
+  {
+      if(lictype=='PJ'){
+          $("#span44").css({"color":"red"});
+      }
+      else if(lictype=='SS'){
+          $("#span77").css({"color":"red"});
+      }
+      else if(lictype =='LY'){
+          $("#span66").css({"color":"red"});
+      }
+  }
+}
+
 function showinfo(){
     $(".info").css({"display": "block"});
  
 }
+
 
 function hidetr(){
     $("#tr8").hide();
