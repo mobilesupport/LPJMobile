@@ -95,7 +95,7 @@ function getvalue(QRresult){
     var sha1key = "123456";
     var key1 = "123";
     var key2 = "456";
-   // var result =//"LY|00003|LPJ/LY/16-00004|DA DAN XIA||01/05/2016|01/05/2017|Adam|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|c5c5b93b94aaac6dbbd81b1962d11485a8c9d82f";
+    var result ="LY|00003|LPJ/LY/16-00004|DA DAN XIA||01/05/2016|01/05/2017|Adam|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|c5c5b93b94aaac6dbbd81b1962d11485a8c9d82f";
     
       // "SS|SEAGULLS FORWARDING AGENCY SDN BHD|NO 38A, JALAN SENTOSA 5,|BAYU TINGGI, 41200, KLANG,|SELANGOR|EJEN FRET (FREIGHT FORWARDER)|P.G.P|LPJ/PG01/16-00002|20/052016|20/11/2016|1212|2323|00003|47d846e9d973927d7910bf8d61d36c01ee481ef3";
         
@@ -103,7 +103,7 @@ function getvalue(QRresult){
     
     
         
-    var result=QRresult;
+   // var result=QRresult;
         
     var split = result.split("|"); 
     var value = split.slice(0, split.length - 1).join("|") + "|";     
@@ -138,6 +138,8 @@ function loadinfo(split){
 
 function PJLicense(split){
     
+   $('.lictype').text("Private Jetty Lesen");
+    
    $('#span1').text("LESSEN :");
    $('#span11').text(split[2]);
     
@@ -165,25 +167,27 @@ function PJLicense(split){
 
 function SSLicense(split){
     
+    $('.lictype').text("Support Service Lesen");
+    
    $('#span1').text("COMPANY NAME :");
    $('#span11').text(split[1]);
     
    $('#span2').text("COMPANY ADDRESS :");
    $('#span22').text(split[2] + " " + split[3] + " " + split[4]);
     
-   $('#span3').text("LESEN CATEGORY/ JENIS LESSEN :");
+   $('#span3').text("JENIS LESSEN :");
    $('#span33').text(split[5]);
     
-   $('#span4').text("LOCATION/ LOKASI :");
+   $('#span4').text("LOKASI :");
    $('#span44').text(split[6]);
     
-   $('#span5').text("REFERENCE NO/ NO.RUJUKAN :");
+   $('#span5').text("NO.RUJUKAN :");
    $('#span55').text(split[7]);
     
-   $('#span6').text("DATE OF ISSUE/ TARIKH DIKELUARKAN :");
+   $('#span6').text("TARIKH DIKELUARKAN :");
    $('#span66').text(split[8]);
     
-   $('#span7').text("DATE OF EXPIRY/ TARIKH TAMAT :");
+   $('#span7').text("TARIKH TAMAT :");
    $('#span77').text(split[9]);
     
    $('#span8').text("PDA NO. :");
@@ -197,6 +201,7 @@ function SSLicense(split){
 }
 
 function LYLicense(split){
+   $('.lictype').text("Lay Up Lesen");
     
    $('#span1').text("NO LESEN :");
    $('#span11').text(split[1]);

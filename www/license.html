@@ -80,9 +80,18 @@
         <div class="contentinfo">
             <div class="banner">
                 <span class="welcometextblue">Welcome [...........]</span>
+                <button class="lictype"></button>
             </div>
            <div class="info">
+               
             <table class="tableinfo">
+<!--
+                <tr>
+                    <td>
+                        <center id="lictype" class="labelText"></center>
+                    </td>
+                </tr>
+-->
                 <tr>
                     <td>
                         <span id="span1" class="label"></span>
@@ -195,7 +204,8 @@
         <script type="text/javascript">
        
  $(document).ready(function(){
-            slideMenu.initSlideMenu();            
+            slideMenu.initSlideMenu();  
+     getvalue();
         });
     </script>
 

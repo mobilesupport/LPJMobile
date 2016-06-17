@@ -9,7 +9,7 @@
     <name>LPJ Mobile</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        LPJ Mobile
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
@@ -23,6 +23,10 @@
     <preference name="DisallowOverscroll"         value="true" />
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-minSdkVersion"      value="14" />
+    <preference name="fullscreen" value="false"/>
+    <preference name="orientation" value="portrait"/>
+    <preference name="android-windowSoftInputMode" value="adjustPan"/>
+    <preference name="android:configChanges" value="orientation|keyboardHidden"/>
     <!-- Define a specific version of PhoneGap to build into your app. -->
     <!-- <preference name="phonegap-version"       value="cli-6.0.0" /> -->
 

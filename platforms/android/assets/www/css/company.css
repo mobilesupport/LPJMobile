@@ -138,25 +138,27 @@ body {
 }
 
 .inputcom{
-    width: 50%;
-    height: 6vw;
+    width: 90%;
+    height: 9vw;
     position: absolute;
-    left: 25%;
+    left: 5%;
     top: 15%;
     outline: none;
     border: 1px solid #215BE2;
+    font-size: 6vw;
+    text-align: center;
 }
 
 .btnsearch{
-    width: 80%;
-    height: 9vw;
+    width: 90%;
+    height: 10vw;
     position: absolute;
-    left: 10%;
+    left: 5%;
     top: 35%;
     outline: none;
     border: none;
     background-color: #215BE2;
     color: white;
-    font-size: 5vw;
+    font-size: 6vw;
    box-shadow: -2px 6px 44px -6px rgba(0,0,0,0.75);
 }

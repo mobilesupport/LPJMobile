@@ -31,7 +31,7 @@ body {
     padding:0px;
     text-transform:uppercase;
     width:100%;
-    background-color: #215BE2;
+    background-color: white;
     overflow: hidden;
 }
 
@@ -115,9 +115,9 @@ h1 {
 
 .content{
     width: 100%;
-    height: 37%;
+    height: 47%;
     position: absolute;
-    top: 60%;
+    top: 50%;
 
 }
 
@@ -126,9 +126,7 @@ h1 {
     height: 10vw;
     text-align: center;
     outline: none;
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    border: 1px solid #215BE2;
     position: absolute;
     top:0%;
     left: 5%;
@@ -141,11 +139,9 @@ h1 {
     height: 10vw;
     text-align: center;
     outline: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: 1px solid #215BE2;
     position: absolute;
-    top: 20%;
+    top: 16%;
     left: 5%;
     font-size: 6.5vw;
     font-family: 'Newcicle';
@@ -175,6 +171,7 @@ h1 {
 
 .centertext{
     font-size: 4vw;
+    color: black;
 }
 
 span{
@@ -188,11 +185,11 @@ span{
     bottom: 0px;
     width: 100%;
     height: 5vw;
-    background-color: white;
+    background-color:#215BE2;
 }
 
 .footertext{
-    color: black;
+    color: white;
     text-transform: none;
     font-size: 4vw;
     font-family: "Aver";
@@ -210,6 +207,6 @@ span{
 
 .name{
     font-size: 6vw;
-    color: white;
+    color: black;
     font-family: "Aver";
 }
