@@ -117,7 +117,7 @@ function getvalue(QRresult){
         loadinfo(split);
     }
     else{
-        alert("This QR code is not supported\n Please try again");
+        alert("This QR code is not supported\nPlease try again");
         window.location="home.html";
             
     }
