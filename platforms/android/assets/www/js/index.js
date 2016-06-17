@@ -40,8 +40,8 @@ var app = {
     
      $('.btnSignIn').on('touchstart click', function(e){
             e.stopPropagation(); e.preventDefault();
-//            window.location="home.html";
-         $.mobile.changePage( "home.html", { transition: "slideup"} );
+            window.location="home.html";
+         //$.mobile.changePage( "home.html", { transition: "slideup"} );
         });   
         
 
