@@ -107,7 +107,7 @@ function getvalue(QRresult){
         
     var split = result.split("|"); 
     var value = split.slice(0, split.length - 1).join("|") + "|";     
-    var valuewithkey = key1 +"|" + value +key2 + "|";
+    var valuewithkey = key1 +"|" + value +key2 + "|" + sha1key;
     
     // hashed value
     var hashedvalue = SHA1(valuewithkey);
